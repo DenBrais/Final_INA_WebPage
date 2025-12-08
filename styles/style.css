@@ -1,0 +1,24 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+  --spacing-unit: 8px;
+}
+.gaming-pc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-template-rows: repeat(2, minmax(250px, 1fr));
+
+  gap: calc(var(--spacing-unit) * 2);
+  padding: var(--spacing-unit);
+  background-color: var(--primary-color);
+  color: #fff;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+.gaming-pc-grid .gaming-pc {
+  background-color: var(--secondary-color);
+}
