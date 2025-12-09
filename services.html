@@ -108,7 +108,7 @@
             <div class="accordion-item first-item">
               <h2 class="accordion-header">
                 <button
-                  class="accordion-button show"
+                  class="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#flush-collapseOne"
@@ -499,7 +499,8 @@
                         class="form-control"
                         id="telefono"
                         name="telefono"
-                        placeholder="1234-5678"
+                        placeholder="8888-8888"
+                        pattern="[0-9]{4}-[0-9]{4}"
                       />
                     </div>
 
@@ -669,7 +670,8 @@
                         class="form-control"
                         id="telefono_compra"
                         name="telefono_compra"
-                        placeholder="1234-5678"
+                        placeholder="8888-8888"
+                        pattern="[0-9]{4}-[0-9]{4}"
                         required
                       />
                     </div>
@@ -795,16 +797,18 @@
       </div>
 
       <!-- Footer -->
-      <div class="row footer d-flex p-1 bg-dark-subtle text-dark">
+      <div
+        class="row footer d-flex flex-column flex-md-row p-1 bg-dark-subtle text-dark"
+      >
         <div
-          class="col-sm-3 footer-copy-right d-flex justify-content-center align-items-center"
+          class="col-12 col-md-3 footer-copy-right d-flex justify-content-center align-items-center py-2"
         >
-          <p>
+          <p class="mb-0 text-center">
             &copy; 2025 BRARO Soluciones Tecnologicas<br />All rights reserved.
           </p>
         </div>
-        <div class="col-sm-7 enlaces-interes">
-          <h5>Enlaces de interés</h5>
+        <div class="col-12 col-md-7 enlaces-interes py-2">
+          <h5 class="text-center text-md-start">Enlaces de interés</h5>
           <ul class="lista-enlaces-interes d-flex flex-column">
             <li class="item-enlaces-interes">
               <a
@@ -839,16 +843,35 @@
           </ul>
         </div>
         <div
-          class="col-sm-2 social-media-links d-flex justify-content-center align-items-center"
+          class="col-12 col-md-2 social-media-links d-flex justify-content-center align-items-center gap-2 py-2"
         >
-          <a href="https://www.facebook.com" target="_blank">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            aria-label="Facebook"
+          >
             <img src="img/facebook_Logo.png" alt="Facebook" width="32" />
           </a>
-          <a href="https://www.instagram.com" target="_blank">
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            aria-label="Instagram"
+          >
             <img src="img/instagram_Logo.png" alt="Instagram" width="32" />
           </a>
-          <a href="https://www.tiktok.com/" target="_blank">
+          <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">
             <img src="img/tiktok_Logo.png" alt="TikTok" width="32" />
+          </a>
+          <a
+            href="https://wa.me/50684498974?text=Hola%20BRARO%20Soluciones%20Tecnologicas"
+            target="_blank"
+            aria-label="WhatsApp +506 8449 8974"
+            title="+506 8449 8974"
+          >
+            <i
+              class="bi bi-whatsapp"
+              style="font-size: 1.5rem; color: #25d366"
+            ></i>
           </a>
         </div>
       </div>

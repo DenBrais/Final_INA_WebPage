@@ -10,43 +10,106 @@
   --line-height-base: 1.5;
   --spacing-unit: 8px;
 }
+/* PAGINA INDEX */
+/* Gaming PC Grid */
 .gaming-pc-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
-  grid-template-rows: repeat(2, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
 
-  gap: calc(var(--spacing-unit) * 2);
-  padding: var(--spacing-unit);
-  background-color: var(--background-primary);
-  color: #fff;
-  font-family: var(--font-family);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
+.computadoras-gaming {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 1rem;
 }
-.gaming-pc-grid .gaming-pc-item {
-  background-color: var(--background-tertiary);
-  align-items: center;
-  text-align: center;
-  text-wrap: inherit;
+
+.gaming-pc-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
+
+.gaming-pc-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
 .gaming-pc-item a {
-  text-decoration: none;
-  color: var(--link-primary-color);
-  text-align: center;
-  padding: 5px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
 }
+
 .gaming-pc-item img {
-  max-width: 90%;
+  display: block;
+  width: 100%;
   height: auto;
-  z-index: 0;
+  transition: opacity 0.3s ease;
 }
-/* .gaming-pc-item span {
-  z-index: 2;
-  display: block;
+
+.gaming-pc-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
 }
-.gaming-pc-item span:hover {
-  display: block;
-} */
+
+.gaming-pc-item:hover .gaming-pc-overlay {
+  opacity: 1;
+}
+
+.gaming-pc-overlay p {
+  color: #fff;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .gaming-pc-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gaming-pc-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .gaming-pc-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .gaming-pc-overlay p {
+    font-size: 0.75rem;
+  }
+}
+
 .index-footer {
   height: 25vh;
 }
@@ -107,4 +170,44 @@
 .img-banner:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
+}
+
+/* PÁGINA SOCIAL */
+.social-hero {
+  min-height: 400px;
+}
+
+.social-metrics h2 {
+  color: var(--bs-primary);
+}
+
+.social-programs .card {
+  transition: transform 0.3s ease;
+}
+
+.social-programs .card:hover {
+  transform: translateY(-5px);
+}
+
+.social-testimonials .badge {
+  font-size: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .computadoras-gaming {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .gaming-pc-overlay p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .computadoras-gaming {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
 }
