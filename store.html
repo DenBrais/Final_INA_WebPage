@@ -11,6 +11,11 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <!-- Iconos Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container-fluid" style="min-width: 500px">
@@ -83,6 +88,253 @@
         </div>
       </div>
 
+      <!-- Hero / título tienda -->
+      <section class="row py-4 align-items-center bg-body-tertiary">
+        <div class="col-lg-8">
+          <h1 class="fw-bold mb-2">Tienda BRARO</h1>
+          <p class="text-secondary mb-0">
+            Tecnología, laptops, desktops, monitores y accesorios.
+          </p>
+        </div>
+        <div class="col-lg-4 d-flex justify-content-lg-end mt-3 mt-lg-0">
+          <div class="input-group" style="max-width: 360px">
+            <span class="input-group-text bg-white border-end-0">
+              <i class="bi bi-search"></i>
+            </span>
+            <input
+              type="search"
+              class="form-control border-start-0"
+              placeholder="Buscar productos"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Contenido principal: sidebar filtros + grid -->
+      <section class="row py-4 g-3">
+        <!-- Sidebar filtros -->
+        <aside class="col-12 col-md-4 col-lg-3">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title mb-3">Filtros</h5>
+
+              <div class="mb-3">
+                <p class="fw-semibold mb-1">Categorías</p>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cat-laptops" />
+                  <label class="form-check-label" for="cat-laptops">Laptops</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cat-desktops" />
+                  <label class="form-check-label" for="cat-desktops">Desktops</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cat-monitores" />
+                  <label class="form-check-label" for="cat-monitores">Monitores</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cat-accesorios" />
+                  <label class="form-check-label" for="cat-accesorios">Accesorios</label>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <p class="fw-semibold mb-1">Marcas</p>
+                <select class="form-select form-select-sm">
+                  <option>Todas</option>
+                  <option>Lenovo</option>
+                  <option>HP</option>
+                  <option>ASUS</option>
+                  <option>Dell</option>
+                  <option>Acer</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <p class="fw-semibold mb-1">Precio (USD)</p>
+                <div class="d-flex gap-2">
+                  <input type="number" class="form-control form-control-sm" placeholder="Mín" />
+                  <input type="number" class="form-control form-control-sm" placeholder="Máx" />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <p class="fw-semibold mb-1">Procesador</p>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cpu-i5" />
+                  <label class="form-check-label" for="cpu-i5">Intel i5 / i7 / i9</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cpu-ryzen" />
+                  <label class="form-check-label" for="cpu-ryzen">AMD Ryzen 5 / 7 / 9</label>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <p class="fw-semibold mb-1">Gráficos</p>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gpu-rtx40" />
+                  <label class="form-check-label" for="gpu-rtx40">NVIDIA RTX 40</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gpu-rtx30" />
+                  <label class="form-check-label" for="gpu-rtx30">NVIDIA RTX 30</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gpu-integrada" />
+                  <label class="form-check-label" for="gpu-integrada">Integrada</label>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <p class="fw-semibold mb-1">RAM</p>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ram-16" />
+                  <label class="form-check-label" for="ram-16">16 GB</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ram-32" />
+                  <label class="form-check-label" for="ram-32">32 GB</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ram-64" />
+                  <label class="form-check-label" for="ram-64">64 GB</label>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <p class="fw-semibold mb-1">Almacenamiento</p>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ssd-512" />
+                  <label class="form-check-label" for="ssd-512">SSD 512 GB</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ssd-1tb" />
+                  <label class="form-check-label" for="ssd-1tb">SSD 1 TB</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ssd-2tb" />
+                  <label class="form-check-label" for="ssd-2tb">SSD 2 TB</label>
+                </div>
+              </div>
+
+              <div class="d-flex gap-2">
+                <button class="btn btn-primary btn-sm w-50">Aplicar</button>
+                <button class="btn btn-outline-secondary btn-sm w-50">Limpiar</button>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Grid de productos -->
+        <div class="col-12 col-md-8 col-lg-9">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <p class="mb-0 text-secondary">Mostrando 8 productos</p>
+            <div class="d-flex align-items-center gap-2">
+              <span class="text-secondary small">Ordenar por:</span>
+              <select class="form-select form-select-sm" style="width: 180px">
+                <option>Relevancia</option>
+                <option>Precio: menor a mayor</option>
+                <option>Precio: mayor a menor</option>
+                <option>Novedades</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img src="img/offer img/offer_lenovo_14.png" class="card-img-top" alt="Lenovo L14" />
+                <div class="card-body d-flex flex-column">
+                  <h6 class="card-title mb-1">Lenovo ThinkPad L14 Gen 5</h6>
+                  <p class="small text-secondary mb-2">i7 | 16 GB RAM | 512 GB SSD | RTX 2050</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">$1,199</span>
+                    <a href="#" class="btn btn-primary btn-sm">Ver más</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img src="img/offer img/offer_hp_360.png" class="card-img-top" alt="HP Spectre x360" />
+                <div class="card-body d-flex flex-column">
+                  <h6 class="card-title mb-1">HP Spectre x360 2025</h6>
+                  <p class="small text-secondary mb-2">i7 | 32 GB RAM | 1 TB SSD | OLED</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">$1,499</span>
+                    <a href="#" class="btn btn-primary btn-sm">Ver más</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img src="img/offer img/offer_asus_14.png" class="card-img-top" alt="ASUS Zenbook" />
+                <div class="card-body d-flex flex-column">
+                  <h6 class="card-title mb-1">ASUS Zenbook OLED 2025</h6>
+                  <p class="small text-secondary mb-2">Ryzen 7 | 16 GB | 1 TB SSD | OLED 14"</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">$1,299</span>
+                    <a href="#" class="btn btn-primary btn-sm">Ver más</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img src="img/offer img/offer_apple_15.jpg" class="card-img-top" alt="MacBook Pro 14" />
+                <div class="card-body d-flex flex-column">
+                  <h6 class="card-title mb-1">MacBook Pro 14 (M2 Pro)</h6>
+                  <p class="small text-secondary mb-2">M2 Pro | 16 GB | 1 TB SSD | Liquid Retina</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">$2,199</span>
+                    <a href="#" class="btn btn-primary btn-sm">Ver más</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img src="img/offer img/offer_mon_lg.avif" class="card-img-top" alt="Monitor LG OLED" />
+                <div class="card-body d-flex flex-column">
+                  <h6 class="card-title mb-1">LG OLED Gaming 32"</h6>
+                  <p class="small text-secondary mb-2">240 Hz | 0.03 ms | G-Sync</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">$899</span>
+                    <a href="#" class="btn btn-primary btn-sm">Ver más</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img src="img/offer img/offer_hp_360.png" class="card-img-top" alt="HP Victus" />
+                <div class="card-body d-flex flex-column">
+                  <h6 class="card-title mb-1">HP Victus 15</h6>
+                  <p class="small text-secondary mb-2">i5 | RTX 3050 | 16 GB | 512 GB SSD</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">$999</span>
+                    <a href="#" class="btn btn-primary btn-sm">Ver más</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paginación -->
+          <nav class="mt-4">
+            <ul class="pagination pagination-sm justify-content-center">
+              <li class="page-item disabled"><a class="page-link" href="#">Anterior</a></li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
       <div class="row footer d-flex p-1 bg-dark-subtle text-dark">
         <div
           class="col-sm-3 footer-copy-right d-flex justify-content-center align-items-center"
@@ -139,6 +391,31 @@
             <img src="img/tiktok_Logo.png" alt="TikTok" width="32" />
           </a>
         </div>
+      </div>
+    </div>
+
+    <!-- Botón flotante de categorías -->
+    <div class="position-fixed" style="right: 18px; bottom: 22px; z-index: 1080">
+      <div class="dropup">
+        <button
+          class="btn btn-primary rounded-circle p-3 shadow-lg"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="bi bi-funnel"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow">
+          <li><h6 class="dropdown-header">Categorías</h6></li>
+          <li><a class="dropdown-item" href="#">Laptops</a></li>
+          <li><a class="dropdown-item" href="#">Desktops</a></li>
+          <li><a class="dropdown-item" href="#">Tablets</a></li>
+          <li><a class="dropdown-item" href="#">Monitores</a></li>
+          <li><a class="dropdown-item" href="#">Wearables</a></li>
+          <li><a class="dropdown-item" href="#">Accesorios</a></li>
+          <li><a class="dropdown-item" href="#">Componentes</a></li>
+          <li><a class="dropdown-item" href="#">Redes y Audio</a></li>
+        </ul>
       </div>
     </div>
 
