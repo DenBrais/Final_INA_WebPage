@@ -1,6 +1,10 @@
 :root {
-  --primary-color: #3498db;
+  --background-primary: #f5f7fa;
+  --background-secondary: #b6b9bd;
+  --background-tertiary: #d0d4da;
+  --primary-color: #091d2b;
   --secondary-color: #2ecc71;
+  --link-primary-color: #6014c4;
   --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-size-base: 16px;
   --line-height-base: 1.5;
@@ -13,12 +17,87 @@
 
   gap: calc(var(--spacing-unit) * 2);
   padding: var(--spacing-unit);
-  background-color: var(--primary-color);
+  background-color: var(--background-primary);
   color: #fff;
   font-family: var(--font-family);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
 }
-.gaming-pc-grid .gaming-pc {
-  background-color: var(--secondary-color);
+.gaming-pc-grid .gaming-pc-item {
+  background-color: var(--background-tertiary);
+  align-items: center;
+  text-align: center;
+  text-wrap: inherit;
+}
+.gaming-pc-item a {
+  text-decoration: none;
+  color: var(--link-primary-color);
+  text-align: center;
+  padding: 5px;
+}
+.gaming-pc-item img {
+  max-width: 90%;
+  height: auto;
+  z-index: 0;
+}
+/* .gaming-pc-item span {
+  z-index: 2;
+  display: block;
+}
+.gaming-pc-item span:hover {
+  display: block;
+} */
+.index-footer {
+  height: 25vh;
+}
+.footer-copy-right p {
+  text-align: center;
+}
+.enlaces-interes h5 {
+  text-align: center;
+  font-style: italic;
+}
+.lista-enlaces-interes .item-enlaces-interes {
+  list-style-type: none;
+  margin-bottom: calc(var(--spacing-unit) * 1);
+}
+.lista-enlaces-interes .item-enlaces-interes a {
+  text-decoration: none;
+  color: var(--link-primary-color);
+  margin: 0 calc(var(--spacing-unit) * 1);
+}
+/* PAGINA ABOUT */
+.about-section-who,
+.about-section-mission,
+.about-section-vission,
+.about-section-social {
+  background-color: var(--background-tertiary);
+  padding: calc(var(--spacing-unit) * 4);
+  border-radius: calc(var(--spacing-unit) * 10);
+}
+.about-text h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+.who-img img,
+.mission-img img,
+.vission-img img,
+.social-img img {
+  border-radius: 8px;
+  max-width: 80%;
+}
+.who-img p,
+.mission-img p,
+.vission-img p,
+.social-img p {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  text-align: justify;
+  max-width: 80%;
+  padding-top: calc(var(--spacing-unit) * 2);
+}
+.who-img p:hover,
+.who-img img:hover {
+  transform: scale(1.1);
 }

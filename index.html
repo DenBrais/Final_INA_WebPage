@@ -13,503 +13,636 @@
     />
   </head>
   <body>
-    <div class="container-fluid" style="min-width: 500px">
-      <div class="row body">
-        <div class="col-1 d-none d-sm-block stores-menu p-1 vh-100 sticky-top">
-          <div class="fixed-store-menu">
-            <nav class="navbar bg-success vh-100">
-              <div
-                class="container-fluid d-flex flex-direction-column justify-content-center"
+    <div class="container-fluid bg-body-white">
+      <div class="row NavBar sticky-top shadow-lg">
+        <div class="col-9 main-menu">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand m-0" href="index.html">
+                <img
+                  src="img/Logo Braro.png"
+                  alt="Logo Braro"
+                  width="100"
+                  height="50"
+                />
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
               >
-                <!-- aca borre la marca jeje -->
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="offcanvas"
-                  data-bs-target="#offcanvasNavbar"
-                  aria-controls="offcanvasNavbar"
-                  aria-label="Toggle navigation"
-                >
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div
-                  class="offcanvas offcanvas-start"
-                  tabindex="-1"
-                  id="offcanvasNavbar"
-                  aria-labelledby="offcanvasNavbarLabel"
-                >
-                  <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                      Offcanvas
-                    </h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="offcanvas"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"
-                          >Home</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a
-                          class="nav-link dropdown-toggle"
-                          href="#"
-                          role="button"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li>
-                            <a class="dropdown-item" href="#">Another action</a>
-                          </li>
-                          <li>
-                            <hr class="dropdown-divider" />
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="#"
-                              >Something else here</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                    <form class="d-flex mt-3" role="search">
-                      <input
-                        class="form-control me-2"
-                        type="search"
-                        placeholder="Search"
-                        aria-label="Search"
-                      />
-                      <button class="btn btn-outline-success" type="submit">
-                        Search
-                      </button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </div>
-        <div class="col-sm-11 index-body-info p-1 bg-body-tertiary">
-          <div class="row NavBar sticky-top">
-            <div class="col-9 main-menu">
-              <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                  <a class="navbar-brand m-0" href="index.html">
-                    <img
-                      src="img/Logo Braro.png"
-                      alt="Bootstrap"
-                      width="100"
-                      height="50"
-                    />
-                  </a>
-                  <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                  >
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul
-                      class="nav nav-pills d-flex justify-content-around w-100"
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav nav-pills d-flex justify-content-around w-100">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      aria-current="page"
+                      href="index.html"
+                      >Home</a
                     >
-                      <li class="nav-item">
-                        <a
-                          class="nav-link active"
-                          aria-current="page"
-                          href="index.html"
-                          >Home</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">ACERCA</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="store.html">TIENDA</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="services.html">SERVICIOS</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="social.html">SOCIAL</a>
-                      </li>
-                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">ACERCA</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="store.html">TIENDA</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="services.html">SERVICIOS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="social.html">SOCIAL</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="col-3 search-menu">
+          <nav class="navbar">
+            <div class="container-fluid">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="row bienvenida">
+        <div
+          class="col-lg-12 d-flex justify-content-center align-items-center p-3"
+        >
+          <img
+            src="img/Imagen de bienvenida.png"
+            class="img-fluid vh-100 w-100"
+            alt="Imagen de bienvenida"
+          />
+        </div>
+      </div>
+      <div class="row ofertas-rapidas justify-content-center">
+        <div
+          class="col-lg-12 justifify-content-center shadow-lg p-1 bg-body-secondary rounded"
+        >
+          <span
+            class="body-title d-flex justify-content-center align-items-center p-3"
+            ><h2>OFERTAS RAPIDAS</h2></span
+          >
+          <span class="offer-carousel">
+            <div id="carouselExampleIndicators" class="carousel slide">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div
+                    class="row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 carousel-subitem d-flex justify-content-between flex-wrap"
+                  >
+                    <div class="col-3 carousel-subitem-item p-1">
+                      <div class="card" style="width: 100%">
+                        <img
+                          src="img/offer img/offer_lenovo_14.png"
+                          class="card-img-top"
+                          alt="off_len_14"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Lenovo ThinkPad L14 Gen 5</h5>
+                          <p class="card-text"></p>
+                          <a href="store.html" class="btn btn-primary"
+                            >Mas detalles</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3 carousel-subitem-item p-1">
+                      <div class="card" style="width: 100%">
+                        <img
+                          src="img/offer img/offer_hp_360.png"
+                          class="card-img-top"
+                          alt="off_hp_360"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">HP Spectre x360 2025</h5>
+                          <p class="card-text"></p>
+                          <a href="store.html" class="btn btn-primary"
+                            >Mas detalles</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3 carousel-subitem-item p-1">
+                      <div class="card" style="width: 100%">
+                        <img
+                          src="img/offer img/offer_apple_15.jpg"
+                          class="card-img-top"
+                          alt="off_apple_15"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">
+                            Apple MacBook Pro 14 (M2 Pro)
+                          </h5>
+                          <p class="card-text"></p>
+                          <a href="store.html" class="btn btn-primary"
+                            >Mas detalles</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3 carousel-subitem-item p-1">
+                      <div class="card" style="width: 100%">
+                        <img
+                          src="img/offer img/offer_asus_14.png"
+                          class="card-img-top"
+                          alt="off_asus_14"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">ASUS Zenbook OLED 2025</h5>
+                          <p class="card-text"></p>
+                          <a href="store.html" class="btn btn-primary"
+                            >Mas detalles</a
+                          >
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </nav>
-            </div>
-            <div class="col-3 search-menu">
-              <nav class="navbar">
-                <div class="container-fluid">
-                  <form class="d-flex" role="search">
-                    <input
-                      class="form-control me-2"
-                      type="search"
-                      placeholder="Search"
-                      aria-label="Search"
-                    />
-                    <button class="btn btn-outline-success" type="submit">
-                      Search
-                    </button>
-                  </form>
+                <div class="carousel-item">
+                  <div
+                    class="row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 carousel-subitem d-flex justify-content-between flex-wrap"
+                  >
+                    <div class="col-3 carousel-subitem-item p-1">
+                      <div class="card" style="width: 100%">
+                        <img
+                          src="img/offer img/offer_mon_lg.avif"
+                          class="card-img-top"
+                          alt="off_mon_lg"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">LG UltraGear GX9</h5>
+                          <p class="card-text">
+                            - Pantalla: 45" OLED curvo 5K2K - Frecuencia: 165 Hz
+                            (UHD) / 330 Hz (FHD) - Contraste: 1.5M:1 - HDR: OLED
+                            HDR - Conectividad: HDMI 2.1, DisplayPort, USB-C -
+                            Dual Mode para gaming competitivo
+                            <a href="store.html" class="btn btn-primary"
+                              >Mas detalles</a
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3 carousel-subitem-item p-1">
+                      <div class="card" style="width: 100%">
+                        <img
+                          src="img/offer img/offer_mon_Sams.webp"
+                          class="card-img-top"
+                          alt="off_mon_Sams"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Odyssey 3D</h5>
+                          <p class="card-text">
+                            - Pantalla: 43" Mini-LED 4K UHD (3840 × 2160) -
+                            Frecuencia: 144 Hz - Tiempo de respuesta: 1 ms -
+                            HDR: VESA DisplayHDR 600 - Tecnología: FreeSync
+                            Premium Pro - Conectividad: HDMI, DisplayPort
+                          </p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3 carousel-subitem-item p-1">
+                      <div class="card" style="width: 100%">
+                        <img
+                          src="img/offer img/offer_mon_asus.png"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">ASUS ROG Swift OLED</h5>
+                          <p class="card-text">
+                            - Pantalla: 27" OLED QHD (2560 × 1440) - Frecuencia:
+                            240 Hz - Tiempo de respuesta: 0.03 ms - HDR:
+                            DisplayHDR True Black 500 - Conectividad: HDMI 2.1,
+                            DisplayPort 1.4, USB - Cobertura de color: 99%
+                            DCI-P3
+                          </p>
+                          <a href="store.html" class="btn btn-primary"
+                            >Mas detalles</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3 carousel-subitem-item p-1">
+                      <div class="card" style="width: 100%">
+                        <img
+                          src="img/offer img/offer_mon_dell.png"
+                          class="card-img-top"
+                          alt="Dell Monitor"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">
+                            - Pantalla: 32" Curvo QD-OLED 4K UHD - Frecuencia:
+                            240 Hz - Tiempo de respuesta: 0.03 ms - HDR: Dolby
+                            Vision, DisplayHDR True Black - Conectividad: DP
+                            1.4, HDMI 2.1, USB - Iluminación AlienFX RGB
+
+                            <a href="store.html" class="btn btn-primary"
+                              >Mas detalles</a
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </nav>
-            </div>
-          </div>
-          <div class="row bienvenida">
-            <div
-              class="col-lg-12 d-flex justify-content-center align-items-center p-3"
-            >
-              <img
-                src="img/Imagen de bienvenida.png"
-                class="img-fluid vh-100 w-100"
-                alt="Imagen de bienvenida"
-              />
-            </div>
-          </div>
-          <div class="row ofertas-rapidas justify-content-center">
-            <div class="col-lg-12 justifify-content-center">
-              <span
-                class="body-title d-flex justify-content-center align-items-center p-3"
-                ><h2>OFERTAS RAPIDAS</h2></span
+                <div class="carousel-item">
+                  <div
+                    class="row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 carousel-subitem d-flex justify-content-between flex-wrap"
+                  >
+                    <div class="col-3 carousel-subitem-item p-1">
+                      <div class="card" style="width: 100%">
+                        <img
+                          src="img/offer img/offer_periferico_1.png"
+                          class="card-img-top"
+                          alt="offer_periferico_1"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">
+                            Logitech G Pro X Superlight 2
+                          </h5>
+                          <p class="card-text">
+                            - Peso: ~60 g (ultraligero) - Sensor: HERO 2, hasta
+                            32,000 DPI - Polling Rate: 2000 Hz (LIGHTSPEED
+                            inalámbrico) - Conectividad: Wireless LIGHTSPEED +
+                            USB-C - Batería: hasta 95 horas de uso continuo -
+                            Switches: híbridos Lightforce (óptico-mecánicos) -
+                            Diseño: ambidiestro, minimalista, optimizado para
+                            eSports
+                          </p>
+                          <a href="store.html" class="btn btn-primary"
+                            >Mas detalles</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3 carousel-subitem-item p-1">
+                      <div class="card" style="width: 100%">
+                        <img
+                          src="img/offer img/offer_periferico_2.png"
+                          class="card-img-top"
+                          alt="offer_periferico_2"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Razer Huntsman V3 Pro</h5>
+                          <p class="card-text">
+                            - Switches: Analog Optical Switches (con ajuste de
+                            actuation) - Funciones avanzadas: Razer™ Snap Tap y
+                            Rapid Trigger Mode para respuestas ultra rápidas -
+                            Retroiluminación: Razer Chroma RGB con millones de
+                            colores personalizables - Diseño: versiones
+                            Full-size, Tenkeyless (TKL) y Mini (60%) -
+                            Materiales: keycaps Doubleshot PBT
+                          </p>
+                          <a href="store.html" class="btn btn-primary"
+                            >Mas detalles</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3 carousel-subitem-item p-1">
+                      <div class="card" style="width: 100%">
+                        <img
+                          src="img/offer img/offer_periferico_3.png"
+                          class="card-img-top"
+                          alt="offer_periferico_3"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Razer BlackShark V2 Pro</h5>
+                          <p class="card-text">
+                            - Drivers: Razer TriForce Titanium de 50 mm -
+                            Sonido: THX Spatial Audio (7.1 Surround) -
+                            Micrófono: HyperClear Super Wideband, desmontable -
+                            Conectividad: Wireless HyperSpeed 2.4 GHz +
+                            Bluetooth - Compatibilidad: PC, PS5, PS4, Xbox,
+                            Switch - Batería: hasta 70 horas de autonomía
+                          </p>
+                          <a href="store.html" class="btn btn-primary"
+                            >Mas detalles</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3 carousel-subitem-item p-1">
+                      <div class="card" style="width: 100%">
+                        <img
+                          src="img/offer img/offer_periferico_4.png"
+                          class="card-img-top"
+                          alt="offer_periferico_4"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Wacom Cintiq Pro 16</h5>
+                          <p class="card-text">
+                            - Pantalla: 15.6" IPS 4K UHD (3840 × 2160) - Área
+                            activa: 345 × 194 mm - Contraste: 1000:1 - Brillo:
+                            250 cd/m² - Colores: 16.7 millones, cobertura amplia
+                            Adobe RGB/DCI-P3 - Tecnología de lápiz: Wacom Pro
+                            Pen 2 con 8192 niveles de presión - Funciones
+                            táctiles: Multi-touch para gestos y navegación -
+                            Conectividad: USB-C, HDMI, DisplayPort
+                          </p>
+                          <a href="store.html" class="btn btn-primary"
+                            >Mas detalles</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
               >
-              <span class="offer-carousel">
-                <div id="carouselExampleIndicators" class="carousel slide">
-                  <div class="carousel-indicators">
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="0"
-                      class="active"
-                      aria-current="true"
-                      aria-label="Slide 1"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="1"
-                      aria-label="Slide 2"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="2"
-                      aria-label="Slide 3"
-                    ></button>
-                  </div>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <div
-                        class="row row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 d-flex justify-content-between flex-wrap"
-                      >
-                        <div class="col-3 p-1">
-                          <div class="card" style="width: 100%">
-                            <img src="..." class="card-img-top" alt="..." />
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">
-                                Some quick example text to build on the card
-                                title and make up the bulk of the card’s
-                                content.
-                              </p>
-                              <a href="#" class="btn btn-primary"
-                                >Go somewhere</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-3 p-1">
-                          <div class="card" style="width: 100%">
-                            <img src="..." class="card-img-top" alt="..." />
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">
-                                Some quick example text to build on the card
-                                title and make up the bulk of the card’s
-                                content.
-                              </p>
-                              <a href="#" class="btn btn-primary"
-                                >Go somewhere</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-3 p-1">
-                          <div class="card" style="width: 100%">
-                            <img src="..." class="card-img-top" alt="..." />
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">
-                                Some quick example text to build on the card
-                                title and make up the bulk of the card’s
-                                content.
-                              </p>
-                              <a href="#" class="btn btn-primary"
-                                >Go somewhere</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-3 p-1">
-                          <div class="card" style="width: 100%">
-                            <img src="..." class="card-img-top" alt="..." />
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">
-                                Some quick example text to build on the card
-                                title and make up the bulk of the card’s
-                                content.
-                              </p>
-                              <a href="#" class="btn btn-primary"
-                                >Go somewhere</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div
-                        class="row-cols-sm-2 row-cols-md-3 row-cols-lg-4 d-flex justify-content-between flex-wrap"
-                      >
-                        <div class="col-3 p-1">
-                          <div class="card" style="width: 100%">
-                            <img src="..." class="card-img-top" alt="..." />
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">
-                                Some quick example text to build on the card
-                                title and make up the bulk of the card’s
-                                content.
-                              </p>
-                              <a href="#" class="btn btn-primary"
-                                >Go somewhere</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-3 p-1">
-                          <div class="card" style="width: 100%">
-                            <img src="..." class="card-img-top" alt="..." />
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">
-                                Some quick example text to build on the card
-                                title and make up the bulk of the card’s
-                                content.
-                              </p>
-                              <a href="#" class="btn btn-primary"
-                                >Go somewhere</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-3 p-1">
-                          <div class="card" style="width: 100%">
-                            <img src="..." class="card-img-top" alt="..." />
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">
-                                Some quick example text to build on the card
-                                title and make up the bulk of the card’s
-                                content.
-                              </p>
-                              <a href="#" class="btn btn-primary"
-                                >Go somewhere</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-3 p-1">
-                          <div class="card" style="width: 100%">
-                            <img src="..." class="card-img-top" alt="..." />
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">
-                                Some quick example text to build on the card
-                                title and make up the bulk of the card’s
-                                content.
-                              </p>
-                              <a href="#" class="btn btn-primary"
-                                >Go somewhere</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div
-                        class="row-cols-sm-2 row-cols-md-3 row-cols-lg-4 d-flex justify-content-between flex-wrap"
-                      >
-                        <div class="col-3 p-1">
-                          <div class="card" style="width: 100%">
-                            <img src="..." class="card-img-top" alt="..." />
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">
-                                Some quick example text to build on the card
-                                title and make up the bulk of the card’s
-                                content.
-                              </p>
-                              <a href="#" class="btn btn-primary"
-                                >Go somewhere</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-3 p-1">
-                          <div class="card" style="width: 100%">
-                            <img src="..." class="card-img-top" alt="..." />
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">
-                                Some quick example text to build on the card
-                                title and make up the bulk of the card’s
-                                content.
-                              </p>
-                              <a href="#" class="btn btn-primary"
-                                >Go somewhere</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-3 p-1">
-                          <div class="card" style="width: 100%">
-                            <img src="..." class="card-img-top" alt="..." />
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">
-                                Some quick example text to build on the card
-                                title and make up the bulk of the card’s
-                                content.
-                              </p>
-                              <a href="#" class="btn btn-primary"
-                                >Go somewhere</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-3 p-1">
-                          <div class="card" style="width: 100%">
-                            <img src="..." class="card-img-top" alt="..." />
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">
-                                Some quick example text to build on the card
-                                title and make up the bulk of the card’s
-                                content.
-                              </p>
-                              <a href="#" class="btn btn-primary"
-                                >Go somewhere</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    class="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev"
-                  >
-                    <span
-                      class="carousel-control-prev-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button
-                    class="carousel-control-next"
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next"
-                  >
-                    <span
-                      class="carousel-control-next-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </span>
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-          </div>
-          <div
-            class="row computadoras-gaming d-flex justify-content-center vh-100"
-          >
-            <span class="pc-gaming-tittle text-center p-2 align-content-center">
-              <h2>COMPUTADORAS GAMING</h2>
+          </span>
+        </div>
+      </div>
+      <div class="row computadoras-gaming">
+        <span
+          class="body-title d-flex justify-content-center align-items-center p-3"
+        >
+          <h2>COMPUTADORAS GAMING</h2>
+        </span>
+        <div class="col-md-12 gaming-pc-grid">
+          <div class="gaming-pc-item">
+            <a href="store.html">
+              <img
+                src="img/gaming img/gaming_pc_1.png"
+                alt="Gaming PC 1"
+                class="img-fluid"
+              />
+            </a>
+            <span>
+              <p>
+                Especificaciones clave: Procesador: Intel Core i9-14900KF
+                Gráficos: NVIDIA GeForce RTX 4090 (24GB GDDR6X) Memoria: hasta
+                64GB DDR5 Almacenamiento: SSD 2TB PCIe Gen4 Sistema: Windows 11
+                Pro Diseño compacto tipo “console style” Refrigeración Silent
+                Storm Cooling 3 Conectividad: Wi-Fi 6E, Bluetooth 5.3
+              </p>
             </span>
-            <div class="col-md-12 gaming-pc-grid">
-              <div class="gaming-pc"></div>
-              <div class="gaming-pc"></div>
-              <div class="gaming-pc"></div>
-              <div class="gaming-pc"></div>
-              <div class="gaming-pc"></div>
-              <div class="gaming-pc"></div>
-            </div>
           </div>
-          <div class="row servicios-tecnicos vh-100 p-1">
-            <div class="col-lg-12">
-              <div class="row tech-serv text-center p-3">
-                <h2>SERVICIOS TECNICOS</h2>
-              </div>
-              <div class="row tech-serv-card">
-                <div class="col-4">
-                  <h4>SERVICIOS TECNICOS</h4>
-                </div>
-                <div class="col-4">
-                  <h4>ARMA TU PC</h4>
-                </div>
-                <div class="col-4">
-                  <h4>TRAEMOS TU CELULAR O PC</h4>
-                </div>
-              </div>
-            </div>
+          <div class="gaming-pc-item">
+            <a href="store.html">
+              <img
+                src="img/gaming img/gaming_pc_2.png"
+                alt="Gaming PC 2"
+                class="img-fluid"
+              />
+            </a>
+            <span>
+              <p>
+                Especificaciones clave: - Procesador: Intel Core i9-14900KF -
+                Gráficos: NVIDIA GeForce RTX 4080/4090 - Memoria: hasta 64GB
+                DDR5 - Almacenamiento: SSD 2TB + HDD 2TB - Sistema: Windows 11
+                Home - Refrigeración líquida AIO - Iluminación Aura Sync RGB -
+                Conectividad: Wi-Fi 6E, Bluetooth 5.3
+              </p>
+            </span>
           </div>
-          <div
-            class="row footer d-flex vh-50 justify-content-evenly align-items-center p-1"
-          >
-            <div class="col-4">
-              <h3>Copy right</h3>
-            </div>
-            <div class="col-4 text-center">
-              <h3>enlaces de interes</h3>
-              <ul class="d-flex flex-column align-items-center p-0">
-                <li><a href="#">link 123456</a></li>
-                <li><a href="#">link 2</a></li>
-                <li><a href="#">link 3</a></li>
-                <li><a href="#">link 4</a></li>
-              </ul>
-            </div>
-            <div class="col-4">
-              <h3>social media</h3>
-            </div>
+          <div class="gaming-pc-item">
+            <a href="store.html">
+              <img
+                src="img/gaming img/gaming_pc_3.avif"
+                alt="Gaming PC 2"
+                class="img-fluid"
+              />
+            </a>
+            <span>
+              <p>
+                Especificaciones clave: Processor Intel® Core™ Ultra 7 Operating
+                System Windows 11 Home Graphics NVIDIA® GeForce RTX™ 5070 Ti
+                16GB GDDR7 32GB Dual Channel DDR5 XMP 2 TB, M.2, Gen5 PCIe NVMe,
+                SSD Bluetooth 5.4 Keyboard Dell Wired Keyboard - KB216 - US
+                English - Black
+              </p>
+            </span>
+          </div>
+          <div class="gaming-pc-item">
+            <a href="store.html">
+              <img
+                src="img/gaming img/gaming_pc_4.avif"
+                alt="Gaming PC 2"
+                class="img-fluid"
+              />
+            </a>
+            <span>
+              <p>
+                Especificaciones clave: Processor Intel® Core™ Ultra 9 275HX, 24
+                cores Operating System Windows 11 Home Graphics Card NVIDIA®
+                GeForce RTX™ 5070 Ti Memory 32 GB DDR5 Storage 1 TB SSD Display
+                16" WQXGA
+              </p>
+            </span>
+          </div>
+          <div class="gaming-pc-item">
+            <a href="store.html">
+              <img
+                src="img/gaming img/gaming_pc_5.avif"
+                alt="Gaming PC 2"
+                class="img-fluid"
+              />
+            </a>
+            <span>
+              <p>
+                Especificaciones clave: Processor AMD Ryzen™ AI 7 350 Processor
+                (2.00 GHz up to 5.00 GHz) Operating System Windows 11 Home 64
+                Graphic Card NVIDIA® GeForce RTX™ 5060 Laptop GPU 8GB GDDR7
+                Memory 32 GB DDR5-5600MT/s (SODIMM)(2 x 16 GB) Storage 1 TB SSD
+                M.2 2242 PCIe Gen4 TLC Display 15.1" WQXGA (2560 x 1600), OLED
+              </p>
+            </span>
+          </div>
+          <div class="gaming-pc-item">
+            <a href="store.html">
+              <img
+                src="img/gaming img/gaming_pc_6.png"
+                alt="Gaming PC 2"
+                class="img-fluid"
+              />
+            </a>
+            <span>
+              <p>
+                Especificaciones clave: Operating System Windows 11 Home
+                Processor Intel® Core™ Ultra 7 Graphics NVIDIA® GeForce RTX™
+                5060 Laptop GPU Memory 8GB GDDR7
+              </p>
+            </span>
           </div>
         </div>
       </div>
-    </div>
+      <div class="row services-hero-1 p-1 bg-body-secondary">
+        <div
+          class="col-5 serv-tec-text d-flex flex-column justify-content-center align-items-start p-2 text-center shadow-lg"
+        >
+          <h2>Necesitas un articulo de otro pais</h2>
+          <p>
+            ¿Necesitás un celular, laptop o accesorio que no encontrás en Costa
+            Rica?
+            <br />
+            En BRARO lo compramos por vos, directo del exterior.
+            <br />
+            📦 Envío seguro, asesoría personalizada y seguimiento completo.
+            <br />
+            ¡Consultanos hoy mismo!
+          </p>
+        </div>
+        <div class="col-7 sev-tec-img shadow-lg">
+          <a href="services.html">
+            <img
+              src="img/Serv_Compra_Inter.png"
+              alt="Servicio Compra Exterior"
+              class="img-fluid p-2"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="row services-hero-2 p-1 bg-body-tertiary">
+        <div class="col-7 sev-tec-img shadow-lg">
+          <a href="services.html">
+            <img
+              src="img/Serv_Reparac_comp_2.png"
+              alt="Servicio Reparacion Computadora"
+              class="img-fluid p-2"
+            />
+          </a>
+        </div>
+        <div
+          class="col-5 serv-tec-text d-flex flex-column justify-content-center align-items-start p-2 text-center shadow-lg"
+        >
+          <h2>Tu dispositivo esta dañado?</h2>
+          <p>
+            Te brindamos servicio técnico especializado para tus dispositivos
+            electrónicos. 💻🔧 Ya sea que necesites reparar tu laptop,
+            smartphone o tablet, nuestro equipo está aquí para ayudarte.
+            Ofrecemos diagnósticos precisos, reparaciones rápidas y piezas de
+            alta calidad. ¡Contáctanos y recupera el rendimiento de tus
+            dispositivos hoy mismo!
+          </p>
+        </div>
+      </div>
 
+      <div class="row footer d-flex p-1 bg-dark-subtle text-dark">
+        <div
+          class="col-sm-3 footer-copy-right d-flex justify-content-center align-items-center"
+        >
+          <p>
+            &copy; 2025 BRARO Soluciones Tecnologicas<br />All rights reserved.
+          </p>
+        </div>
+        <div class="col-sm-7 enlaces-interes">
+          <h5>Enlaces de interés</h5>
+          <ul class="lista-enlaces-interes d-flex flex-column">
+            <li class="item-enlaces-interes">
+              <a
+                href="https://news.stanford.edu/stories/2025/12/quantum-communication-room-temperature-breakthrough-research"
+              >
+                Investigadores logran comunicación cuántica a temperatura
+                ambiente
+              </a>
+            </li>
+            <li class="item-enlaces-interes">
+              <a
+                href="https://www.cnbc.com/2025/12/02/samsung-galaxy-z-trifold-first-multi-folding-phone-smartphone-competition-chinese-brands-huawei-apple.html"
+              >
+                Novedades en China y EE.UU. (Celulares y PCs)
+              </a>
+            </li>
+            <li class="item-enlaces-interes">
+              <a
+                href="https://www.hindustantimes.com/technology/digital-well-being-in-2025-can-tech-help-us-unplug-or-is-it-making-us-more-addicted-101750750765942.html"
+              >
+                El bienestar digital en 2025: ¿nos ayuda la tecnología a
+                desconectarnos o nos ata más?
+              </a>
+            </li>
+            <li class="item-enlaces-interes">
+              <a
+                href="https://www.ieee.org/advancing-technology/building-better-world/social-impact-report.html"
+              >
+                IEEE publica su Social Impact Report 2025
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="col-sm-2 social-media-links d-flex justify-content-center align-items-center"
+        >
+          <a href="https://www.facebook.com" target="_blank">
+            <img src="img/facebook_Logo.png" alt="Facebook" width="32" />
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+            <img src="img/instagram_Logo.png" alt="Instagram" width="32" />
+          </a>
+          <a href="https://www.tiktok.com/" target="_blank">
+            <img src="img/tiktok_Logo.png" alt="TikTok" width="32" />
+          </a>
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
