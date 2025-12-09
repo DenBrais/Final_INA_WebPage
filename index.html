@@ -11,7 +11,12 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
     <div class="container-fluid bg-body-white">
       <div class="row NavBar sticky-top shadow-lg">
@@ -40,12 +45,7 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="nav nav-pills d-flex justify-content-around w-100">
                   <li class="nav-item">
-                    <a
-                      class="nav-link active"
-                      aria-current="page"
-                      href="index.html"
-                      >Home</a
-                    >
+                    <a class="nav-link" href="index.html">Home</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="about.html">ACERCA</a>
@@ -64,22 +64,37 @@
             </div>
           </nav>
         </div>
-        <div class="col-3 search-menu">
-          <nav class="navbar">
-            <div class="container-fluid">
-              <form class="d-flex" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
-            </div>
-          </nav>
+        <div
+          class="col-3 search-menu d-flex align-items-center justify-content-end"
+        >
+          <div
+            class="input-group d-none d-md-flex me-2"
+            style="max-width: 200px"
+          >
+            <span class="input-group-text bg-white border-end-0">
+              <i class="bi bi-search"></i>
+            </span>
+            <input
+              class="form-control border-start-0"
+              type="search"
+              placeholder="Buscar"
+              aria-label="Buscar"
+            />
+          </div>
+          <a
+            class="d-md-none text-primary fs-4 me-2"
+            href="#"
+            aria-label="Buscar"
+          >
+            <i class="bi bi-search"></i>
+          </a>
+          <a
+            class="carrito text-primary fs-4"
+            href="store.html"
+            aria-label="Carrito"
+          >
+            <i class="bi bi-cart"></i>
+          </a>
         </div>
       </div>
       <div class="row bienvenida">
@@ -128,10 +143,10 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <div
-                    class="row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 carousel-subitem d-flex justify-content-between flex-wrap"
+                    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2"
                   >
-                    <div class="col-3 carousel-subitem-item p-1">
-                      <div class="card" style="width: 100%">
+                    <div class="col">
+                      <div class="card h-100">
                         <img
                           src="img/offer img/offer_lenovo_14.png"
                           class="card-img-top"
@@ -146,8 +161,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-3 carousel-subitem-item p-1">
-                      <div class="card" style="width: 100%">
+                    <div class="col">
+                      <div class="card h-100">
                         <img
                           src="img/offer img/offer_hp_360.png"
                           class="card-img-top"
@@ -162,8 +177,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-3 carousel-subitem-item p-1">
-                      <div class="card" style="width: 100%">
+                    <div class="col">
+                      <div class="card h-100">
                         <img
                           src="img/offer img/offer_apple_15.jpg"
                           class="card-img-top"
@@ -180,8 +195,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-3 carousel-subitem-item p-1">
-                      <div class="card" style="width: 100%">
+                    <div class="col">
+                      <div class="card h-100">
                         <img
                           src="img/offer img/offer_asus_14.png"
                           class="card-img-top"
@@ -200,10 +215,10 @@
                 </div>
                 <div class="carousel-item">
                   <div
-                    class="row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 carousel-subitem d-flex justify-content-between flex-wrap"
+                    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2"
                   >
-                    <div class="col-3 carousel-subitem-item p-1">
-                      <div class="card" style="width: 100%">
+                    <div class="col">
+                      <div class="card h-100">
                         <img
                           src="img/offer img/offer_mon_lg.avif"
                           class="card-img-top"
@@ -216,15 +231,15 @@
                             (UHD) / 330 Hz (FHD) - Contraste: 1.5M:1 - HDR: OLED
                             HDR - Conectividad: HDMI 2.1, DisplayPort, USB-C -
                             Dual Mode para gaming competitivo
-                            <a href="store.html" class="btn btn-primary"
-                              >Mas detalles</a
-                            >
                           </p>
+                          <a href="store.html" class="btn btn-primary"
+                            >Mas detalles</a
+                          >
                         </div>
                       </div>
                     </div>
-                    <div class="col-3 carousel-subitem-item p-1">
-                      <div class="card" style="width: 100%">
+                    <div class="col">
+                      <div class="card h-100">
                         <img
                           src="img/offer img/offer_mon_Sams.webp"
                           class="card-img-top"
@@ -238,12 +253,14 @@
                             HDR: VESA DisplayHDR 600 - Tecnología: FreeSync
                             Premium Pro - Conectividad: HDMI, DisplayPort
                           </p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                          <a href="store.html" class="btn btn-primary"
+                            >Mas detalles</a
+                          >
                         </div>
                       </div>
                     </div>
-                    <div class="col-3 carousel-subitem-item p-1">
-                      <div class="card" style="width: 100%">
+                    <div class="col">
+                      <div class="card h-100">
                         <img
                           src="img/offer img/offer_mon_asus.png"
                           class="card-img-top"
@@ -264,25 +281,24 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-3 carousel-subitem-item p-1">
-                      <div class="card" style="width: 100%">
+                    <div class="col">
+                      <div class="card h-100">
                         <img
                           src="img/offer img/offer_mon_dell.png"
                           class="card-img-top"
                           alt="Dell Monitor"
                         />
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
+                          <h5 class="card-title">Dell Alienware AW3225QF</h5>
                           <p class="card-text">
                             - Pantalla: 32" Curvo QD-OLED 4K UHD - Frecuencia:
                             240 Hz - Tiempo de respuesta: 0.03 ms - HDR: Dolby
                             Vision, DisplayHDR True Black - Conectividad: DP
                             1.4, HDMI 2.1, USB - Iluminación AlienFX RGB
-
-                            <a href="store.html" class="btn btn-primary"
-                              >Mas detalles</a
-                            >
                           </p>
+                          <a href="store.html" class="btn btn-primary"
+                            >Mas detalles</a
+                          >
                         </div>
                       </div>
                     </div>
@@ -290,10 +306,10 @@
                 </div>
                 <div class="carousel-item">
                   <div
-                    class="row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 carousel-subitem d-flex justify-content-between flex-wrap"
+                    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2"
                   >
-                    <div class="col-3 carousel-subitem-item p-1">
-                      <div class="card" style="width: 100%">
+                    <div class="col">
+                      <div class="card h-100">
                         <img
                           src="img/offer img/offer_periferico_1.png"
                           class="card-img-top"
@@ -318,8 +334,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-3 carousel-subitem-item p-1">
-                      <div class="card" style="width: 100%">
+                    <div class="col">
+                      <div class="card h-100">
                         <img
                           src="img/offer img/offer_periferico_2.png"
                           class="card-img-top"
@@ -342,8 +358,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-3 carousel-subitem-item p-1">
-                      <div class="card" style="width: 100%">
+                    <div class="col">
+                      <div class="card h-100">
                         <img
                           src="img/offer img/offer_periferico_3.png"
                           class="card-img-top"
@@ -365,8 +381,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-3 carousel-subitem-item p-1">
-                      <div class="card" style="width: 100%">
+                    <div class="col">
+                      <div class="card h-100">
                         <img
                           src="img/offer img/offer_periferico_4.png"
                           class="card-img-top"
@@ -648,5 +664,16 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script>
+      // Marca activo el enlace de la página actual
+      (function () {
+        const path = location.pathname.split("/").pop() || "index.html";
+        document.querySelectorAll(".NavBar .nav-link").forEach((link) => {
+          const isActive = link.getAttribute("href") === path;
+          link.classList.toggle("active", isActive);
+          link.setAttribute("aria-current", isActive ? "page" : "false");
+        });
+      })();
+    </script>
   </body>
 </html>
