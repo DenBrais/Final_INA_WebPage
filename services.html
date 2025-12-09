@@ -14,6 +14,7 @@
   </head>
   <body>
     <div class="container-fluid" style="min-width: 500px">
+      <!-- Navbar -->
       <div class="row NavBar sticky-top shadow-lg">
         <div class="col-9 main-menu">
           <nav class="navbar navbar-expand-lg">
@@ -82,41 +83,241 @@
           </nav>
         </div>
       </div>
+
+      <!-- Servicios Accordion -->
       <div
         class="row services d-flex justify-content-center align-items-center p-3 mb-3"
       >
         <div class="col-sm-10 services-inner">
           <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
+            <!-- Item 1: Reparación -->
+            <div class="accordion-item first-item">
               <h2 class="accordion-header">
                 <button
                   class="accordion-button show"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#flush-collapseOne"
-                  aria-expanded="true"
+                  aria-expanded="false"
                   aria-controls="flush-collapseOne"
                 >
                   <img
                     src="img/serv_reparacion.png"
                     alt="servicio de reparación"
-                    class="img-fluid"
+                    class="img-banner w-100"
                   />
                 </button>
               </h2>
               <div
                 id="flush-collapseOne"
-                class="accordion-collapse show"
+                class="accordion-collapse collapse"
                 data-bs-parent="#accordionFlushExample"
               >
-                <div class="accordion-body">
-                  Placeholder content for this accordion, which is intended to
-                  demonstrate the <code>.accordion-flush</code> class. This is
-                  the first item’s accordion body.
+                <div class="accordion-body first-item-body">
+                  <h5 class="mb-4">
+                    Formulario de Diagnóstico - Servicio de Reparación
+                  </h5>
+                  <form>
+                    <!-- Campo 1: ¿Qué necesita tu equipo? -->
+                    <div class="mb-3">
+                      <label class="form-label fw-semibold"
+                        >1. ¿Qué necesita tu equipo?</label
+                      >
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="necesidad"
+                          id="reparacion"
+                          value="reparacion"
+                        />
+                        <label class="form-check-label" for="reparacion">
+                          Reparación (no funciona)
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="necesidad"
+                          id="mantenimiento"
+                          value="mantenimiento"
+                        />
+                        <label class="form-check-label" for="mantenimiento">
+                          Mantenimiento Preventivo (está lenta, sucia u otra)
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Campo 2: ¿Qué tipo de dispositivo tienes? -->
+                    <div class="mb-3">
+                      <label for="dispositivo" class="form-label fw-semibold">
+                        2. ¿Qué tipo de dispositivo tienes?
+                      </label>
+                      <select
+                        class="form-select"
+                        id="dispositivo"
+                        name="dispositivo"
+                      >
+                        <option selected disabled>Selecciona una opción</option>
+                        <option value="celular">Celular</option>
+                        <option value="laptop">Laptop</option>
+                        <option value="pc_escritorio">PC Escritorio</option>
+                        <option value="monitor">Monitor</option>
+                      </select>
+                    </div>
+
+                    <!-- Campo 3: Comportamiento del dispositivo (multiple checkboxes) -->
+                    <div class="mb-3">
+                      <label class="form-label fw-semibold">
+                        3. ¿Cuál(es) de las siguientes opciones describe(n) el
+                        comportamiento de tu dispositivo?
+                      </label>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="no_enciende"
+                          name="comportamiento"
+                          value="no_enciende"
+                        />
+                        <label class="form-check-label" for="no_enciende">
+                          No enciende
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="pantalla_lineas"
+                          name="comportamiento"
+                          value="pantalla_lineas"
+                        />
+                        <label class="form-check-label" for="pantalla_lineas">
+                          La pantalla tiene líneas de colores
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="sin_pantalla"
+                          name="comportamiento"
+                          value="sin_pantalla"
+                        />
+                        <label class="form-check-label" for="sin_pantalla">
+                          No da pantalla
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="se_congela"
+                          name="comportamiento"
+                          value="se_congela"
+                        />
+                        <label class="form-check-label" for="se_congela">
+                          Se congela (no arranca)
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="demasiado_lento"
+                          name="comportamiento"
+                          value="demasiado_lento"
+                        />
+                        <label class="form-check-label" for="demasiado_lento">
+                          Es demasiado lento
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="no_carga"
+                          name="comportamiento"
+                          value="no_carga"
+                        />
+                        <label class="form-check-label" for="no_carga">
+                          No carga
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Campo 4: Nombre completo -->
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label fw-semibold">
+                        4. Nombre completo
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Tu nombre completo"
+                        required
+                      />
+                    </div>
+
+                    <!-- Campo 5: Correo electrónico -->
+                    <div class="mb-3">
+                      <label for="correo" class="form-label fw-semibold">
+                        5. Correo electrónico
+                      </label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="correo"
+                        name="correo"
+                        placeholder="tu@correo.com"
+                        required
+                      />
+                    </div>
+
+                    <!-- Campo 6: Dirección exacta -->
+                    <div class="mb-3">
+                      <label for="direccion" class="form-label fw-semibold">
+                        6. Dirección exacta
+                      </label>
+                      <textarea
+                        class="form-control"
+                        id="direccion"
+                        name="direccion"
+                        rows="2"
+                        placeholder="Calle, número, barrio..."
+                        required
+                      ></textarea>
+                    </div>
+
+                    <!-- Campo 7: Información de envío -->
+                    <div
+                      class="mb-3 p-3 bg-info bg-opacity-10 border border-info rounded"
+                    >
+                      <p class="mb-0 text-dark">
+                        <strong>📍 Nuestra dirección de envío:</strong><br />
+                        San Antonio, Isla Chira
+                      </p>
+                    </div>
+
+                    <!-- Botones -->
+                    <div class="d-flex gap-2">
+                      <button type="submit" class="btn btn-primary">
+                        Enviar solicitud
+                      </button>
+                      <button type="reset" class="btn btn-outline-secondary">
+                        Limpiar
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
+
+            <!-- Item 2: Instalación -->
+            <div class="accordion-item second-item">
               <h2 class="accordion-header">
                 <button
                   class="accordion-button collapsed"
@@ -126,7 +327,11 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseTwo"
                 >
-                  Instalacion de software y Configuración de Redes
+                  <img
+                    src="img/serv_instalacion.png"
+                    alt="servicio de instalación"
+                    class="img-banner w-100"
+                  />
                 </button>
               </h2>
               <div
@@ -134,15 +339,199 @@
                 class="accordion-collapse collapse"
                 data-bs-parent="#accordionFlushExample"
               >
-                <div class="accordion-body">
-                  Placeholder content for this accordion, which is intended to
-                  demonstrate the <code>.accordion-flush</code> class. This is
-                  the second item’s accordion body. Let’s imagine this being
-                  filled with some actual content.
+                <div class="accordion-body second-item-body">
+                  <h5 class="mb-4">Formulario de Mantenimiento de Software</h5>
+                  <form>
+                    <!-- Campo 1: ¿Qué necesitas hacer a tu equipo? -->
+                    <div class="mb-3">
+                      <label class="form-label fw-semibold"
+                        >1. ¿Qué necesitas hacer a tu equipo?</label
+                      >
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="servicio_software"
+                          id="instalacion_software"
+                          value="instalacion_software"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="instalacion_software"
+                        >
+                          Instalación de software
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="servicio_software"
+                          id="configurar_red"
+                          value="configurar_red"
+                        />
+                        <label class="form-check-label" for="configurar_red">
+                          Configurar una red específica
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Campo 2: ¿Qué tipo de dispositivo tienes? -->
+                    <div class="mb-3">
+                      <label
+                        for="dispositivo_soft"
+                        class="form-label fw-semibold"
+                      >
+                        2. ¿Qué tipo de dispositivo tienes?
+                      </label>
+                      <select
+                        class="form-select"
+                        id="dispositivo_soft"
+                        name="dispositivo_soft"
+                      >
+                        <option selected disabled>Selecciona una opción</option>
+                        <option value="celular">Celular</option>
+                        <option value="laptop">Laptop</option>
+                        <option value="pc_escritorio">PC Escritorio</option>
+                        <option value="monitor">Monitor</option>
+                      </select>
+                    </div>
+
+                    <!-- Campo 3: Especificar lo que deseas -->
+                    <div class="mb-3">
+                      <label
+                        for="especificacion"
+                        class="form-label fw-semibold"
+                      >
+                        3. Puedes especificar lo que deseas
+                      </label>
+                      <textarea
+                        class="form-control"
+                        id="especificacion"
+                        name="especificacion"
+                        rows="3"
+                        placeholder="Describe qué software necesitas instalar o qué red configurar..."
+                      ></textarea>
+                      <small class="form-text text-muted">
+                        Un técnico se pondrá en contacto contigo
+                      </small>
+                    </div>
+
+                    <!-- Campo 4: Información de descarga de software -->
+                    <div
+                      class="mb-3 p-3 bg-success bg-opacity-10 border border-success rounded"
+                    >
+                      <p class="mb-0 text-dark">
+                        <strong>💾 Descarga software por tu cuenta:</strong
+                        ><br />
+                        Visita
+                        <a
+                          href="https://www.sftwre-forall.com"
+                          target="_blank"
+                          class="text-decoration-none fw-bold"
+                          >www.sftwre-forall.com</a
+                        ><br />
+                        Usa el código:
+                        <span class="badge bg-success">BRARO-25</span> para un
+                        descuento
+                      </p>
+                    </div>
+
+                    <!-- Campo 5: Texto resaltado de envío -->
+                    <div
+                      class="mb-3 p-3 bg-warning bg-opacity-25 border border-warning rounded"
+                    >
+                      <p class="mb-0 fw-bold text-dark">
+                        📦 Si deseas enviarnos tu equipo o traerlo
+                        personalmente, completa los siguientes campos:
+                      </p>
+                    </div>
+
+                    <!-- Campo 6: Nombre completo -->
+                    <div class="mb-3">
+                      <label for="nombre_soft" class="form-label fw-semibold">
+                        6. Nombre completo
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="nombre_soft"
+                        name="nombre_soft"
+                        placeholder="Tu nombre completo"
+                      />
+                    </div>
+
+                    <!-- Campo 7: Correo electrónico -->
+                    <div class="mb-3">
+                      <label for="correo_soft" class="form-label fw-semibold">
+                        7. Correo electrónico
+                      </label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="correo_soft"
+                        name="correo_soft"
+                        placeholder="tu@correo.com"
+                      />
+                    </div>
+
+                    <!-- Campo 8: Número de teléfono -->
+                    <div class="mb-3">
+                      <label for="telefono" class="form-label fw-semibold">
+                        8. Número de teléfono
+                      </label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="telefono"
+                        name="telefono"
+                        placeholder="1234-5678"
+                      />
+                    </div>
+
+                    <!-- Campo 9: Dirección exacta -->
+                    <div class="mb-3">
+                      <label
+                        for="direccion_soft"
+                        class="form-label fw-semibold"
+                      >
+                        9. Dirección exacta
+                      </label>
+                      <textarea
+                        class="form-control"
+                        id="direccion_soft"
+                        name="direccion_soft"
+                        rows="2"
+                        placeholder="Calle, número, barrio..."
+                      ></textarea>
+                    </div>
+
+                    <!-- Campo 10: Información de envío -->
+                    <div
+                      class="mb-3 p-3 bg-info bg-opacity-10 border border-info rounded"
+                    >
+                      <p class="mb-0 text-dark">
+                        <strong>📍 Nuestra dirección de envío:</strong><br />
+                        San Antonio, Isla Chira
+                      </p>
+                    </div>
+
+                    <!-- Botones -->
+                    <div class="d-flex gap-2">
+                      <button type="submit" class="btn btn-primary">
+                        Enviar solicitud
+                      </button>
+                      <button type="reset" class="btn btn-outline-secondary">
+                        Limpiar
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
+
+            <!-- Item 3: Compras Personalizadas -->
+            <div class="accordion-item third-item">
               <h2 class="accordion-header">
                 <button
                   class="accordion-button collapsed"
@@ -152,7 +541,11 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseThree"
                 >
-                  Compras Personalizadas y Asesoramiento Tecnológico
+                  <img
+                    src="img/Serv_Compras.png"
+                    alt="servicio de compras"
+                    class="img-banner w-100"
+                  />
                 </button>
               </h2>
               <div
@@ -160,14 +553,226 @@
                 class="accordion-collapse collapse"
                 data-bs-parent="#accordionFlushExample"
               >
-                <div class="accordion-body">
-                  Placeholder content for this accordion, which is intended to
-                  demonstrate the <code>.accordion-flush</code> class. This is
-                  the third item’s accordion body. Nothing more exciting
-                  happening here in terms of content, but just filling up the
-                  space to make it look, at least at first glance, a bit more
-                  representative of how this would look in a real-world
-                  application.
+                <div class="accordion-body third-item-body">
+                  <h5 class="mb-4">
+                    Formulario de Compras Electrónicas Personalizadas
+                  </h5>
+                  <form>
+                    <!-- Campo 1: ¿Qué objeto tecnológico deseas comprar? -->
+                    <div class="mb-3">
+                      <label for="objeto_compra" class="form-label fw-semibold">
+                        1. ¿Qué objeto tecnológico deseas comprar?
+                      </label>
+                      <textarea
+                        class="form-control"
+                        id="objeto_compra"
+                        name="objeto_compra"
+                        rows="2"
+                        placeholder="Describe el dispositivo o componente que necesitas (ej: laptop gaming, monitor 4K, mouse inalámbrico, etc.)"
+                        required
+                      ></textarea>
+                    </div>
+
+                    <!-- Campo 2: Proporciona el link del producto -->
+                    <div class="mb-3">
+                      <label for="link_producto" class="form-label fw-semibold">
+                        2. Proporciona el link del producto
+                      </label>
+                      <input
+                        type="url"
+                        class="form-control"
+                        id="link_producto"
+                        name="link_producto"
+                        placeholder="https://www.ejemplo.com/producto"
+                      />
+                      <small class="form-text text-muted">
+                        Puedes pegarlo desde Amazon, eBay, Newegg, etc.
+                      </small>
+                    </div>
+
+                    <!-- Campo 3: Especificaciones o requerimientos adicionales -->
+                    <div class="mb-3">
+                      <label
+                        for="especificaciones"
+                        class="form-label fw-semibold"
+                      >
+                        3. Especificaciones o requerimientos adicionales
+                      </label>
+                      <textarea
+                        class="form-control"
+                        id="especificaciones"
+                        name="especificaciones"
+                        rows="2"
+                        placeholder="Ej: color específico, cantidad, configuración, etc."
+                      ></textarea>
+                    </div>
+
+                    <!-- Separador visual -->
+                    <hr class="my-4" />
+
+                    <h6 class="fw-bold mb-3">📋 Información de Contacto</h6>
+
+                    <!-- Campo 4: Nombre completo -->
+                    <div class="mb-3">
+                      <label for="nombre_compra" class="form-label fw-semibold">
+                        4. Nombre completo
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="nombre_compra"
+                        name="nombre_compra"
+                        placeholder="Tu nombre completo"
+                        required
+                      />
+                    </div>
+
+                    <!-- Campo 5: Correo electrónico -->
+                    <div class="mb-3">
+                      <label for="correo_compra" class="form-label fw-semibold">
+                        5. Correo electrónico
+                      </label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="correo_compra"
+                        name="correo_compra"
+                        placeholder="tu@correo.com"
+                        required
+                      />
+                    </div>
+
+                    <!-- Campo 6: Número de teléfono -->
+                    <div class="mb-3">
+                      <label
+                        for="telefono_compra"
+                        class="form-label fw-semibold"
+                      >
+                        6. Número de teléfono
+                      </label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="telefono_compra"
+                        name="telefono_compra"
+                        placeholder="1234-5678"
+                        required
+                      />
+                    </div>
+
+                    <!-- Campo 7: Dirección de envío -->
+                    <div class="mb-3">
+                      <label
+                        for="direccion_compra"
+                        class="form-label fw-semibold"
+                      >
+                        7. Dirección de envío
+                      </label>
+                      <textarea
+                        class="form-control"
+                        id="direccion_compra"
+                        name="direccion_compra"
+                        rows="2"
+                        placeholder="Calle, número, barrio..."
+                        required
+                      ></textarea>
+                    </div>
+
+                    <!-- Información de envío BRARO -->
+                    <div
+                      class="mb-3 p-3 bg-info bg-opacity-10 border border-info rounded"
+                    >
+                      <p class="mb-0 text-dark">
+                        <strong>📍 Nuestra dirección para recibir:</strong
+                        ><br />
+                        San Antonio, Isla Chira
+                      </p>
+                    </div>
+
+                    <!-- Separador visual -->
+                    <hr class="my-4" />
+
+                    <!-- Recomendaciones de sitios seguros -->
+                    <div class="mb-3">
+                      <h6 class="fw-bold mb-3">
+                        🔒 Sitios Web Seguros Recomendados para Compras
+                        Electrónicas
+                      </h6>
+                      <div
+                        class="alert alert-success alert-dismissible fade show"
+                        role="alert"
+                      >
+                        <p class="mb-2">
+                          <strong
+                            >Plataformas internacionales confiables:</strong
+                          >
+                        </p>
+                        <ul class="mb-2 ps-3">
+                          <li>
+                            <a
+                              href="https://www.amazon.com"
+                              target="_blank"
+                              class="text-decoration-none"
+                              >Amazon</a
+                            >
+                            - Amplia variedad y entrega confiable
+                          </li>
+                          <li>
+                            <a
+                              href="https://www.newegg.com"
+                              target="_blank"
+                              class="text-decoration-none"
+                              >Newegg</a
+                            >
+                            - Especialista en componentes de PC
+                          </li>
+                          <li>
+                            <a
+                              href="https://www.ebay.com"
+                              target="_blank"
+                              class="text-decoration-none"
+                              >eBay</a
+                            >
+                            - Nuevos y reacondicionados con protección
+                          </li>
+                          <li>
+                            <a
+                              href="https://www.bestbuy.com"
+                              target="_blank"
+                              class="text-decoration-none"
+                              >Best Buy</a
+                            >
+                            - Marcas líderes con garantía
+                          </li>
+                          <li>
+                            <a
+                              href="https://www.bhphotovideo.com"
+                              target="_blank"
+                              class="text-decoration-none"
+                              >B&H Photo Video</a
+                            >
+                            - Equipos profesionales
+                          </li>
+                        </ul>
+                        <p class="mb-0 small text-muted">
+                          <strong>⚠️ Recomendación:</strong> Verifica que el
+                          sitio tenga certificado SSL (https://), lee
+                          valoraciones de otros compradores, y revisa la
+                          política de devolución antes de comprar.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Botones -->
+                    <div class="d-flex gap-2">
+                      <button type="submit" class="btn btn-primary">
+                        Enviar solicitud de compra
+                      </button>
+                      <button type="reset" class="btn btn-outline-secondary">
+                        Limpiar
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -175,6 +780,7 @@
         </div>
       </div>
 
+      <!-- Footer -->
       <div class="row footer d-flex p-1 bg-dark-subtle text-dark">
         <div
           class="col-sm-3 footer-copy-right d-flex justify-content-center align-items-center"

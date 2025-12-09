@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -85,7 +85,7 @@
       </div>
 
       <!-- Hero / portada social -->
-      <section class="row py-5 bg-body-tertiary align-items-center">
+      <div class="row social-hero py-5 bg-body-tertiary align-items-center">
         <div class="col-lg-6 px-4">
           <span class="text-uppercase fw-semibold text-primary"
             >Impacto Social</span
@@ -111,17 +111,19 @@
           </div>
         </div>
         <div class="col-lg-6 px-4">
-          <!-- Espacio para imagen o ilustración -->
+          <!--  imagen  -->
           <div
             class="ratio ratio-16x9 bg-light border rounded d-flex align-items-center justify-content-center text-secondary"
           >
-            Imagen / ilustración del programa social
+            <img
+              src="img/Sesion de Programación en Aula.png"
+              alt="ayuda social"
+            />
           </div>
         </div>
-      </section>
-
+      </div>
       <!-- Métricas rápidas -->
-      <section class="row text-center py-4 bg-white">
+      <div class="row social-metrics text-center py-4 bg-white">
         <div class="col-md-4">
           <h2 class="fw-bold">250+</h2>
           <p class="text-secondary mb-0">
@@ -136,10 +138,10 @@
           <h2 class="fw-bold">30</h2>
           <p class="text-secondary mb-0">Convenios y becas con INA y aliados</p>
         </div>
-      </section>
+      </div>
 
       <!-- Programas principales -->
-      <section class="row py-5 g-4">
+      <div class="row social-programs py-5 g-4">
         <!-- Programación para niños y jóvenes -->
         <div id="programacion" class="col-lg-4">
           <div class="card h-100 shadow-sm">
@@ -200,10 +202,10 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <!-- Testimonios / casos -->
-      <section class="row py-5 bg-body-secondary">
+      <div class="row social-testimonials py-5 bg-body-secondary">
         <div class="col-12 text-center mb-4">
           <h3 class="fw-bold">Historias de impacto</h3>
           <p class="text-secondary mb-0">
@@ -215,8 +217,8 @@
             <div class="card-body">
               <p class="small text-secondary mb-1">Estudiante (15 años)</p>
               <p class="mb-2">
-                “Con el curso de BRARO hice mi primer videojuego y ahora quiero
-                seguir con Python.”
+                "Con el curso de BRARO hice mi primer videojuego y ahora quiero
+                seguir con Python."
               </p>
               <span class="badge bg-primary">Programación</span>
             </div>
@@ -227,8 +229,8 @@
             <div class="card-body">
               <p class="small text-secondary mb-1">Docente rural</p>
               <p class="mb-2">
-                “Las laptops reacondicionadas permitieron abrir un laboratorio
-                básico en la escuela.”
+                "Las laptops reacondicionadas permitieron abrir un laboratorio
+                básico en la escuela."
               </p>
               <span class="badge bg-success">Donación de equipo</span>
             </div>
@@ -239,17 +241,17 @@
             <div class="card-body">
               <p class="small text-secondary mb-1">Joven en capacitación</p>
               <p class="mb-2">
-                “Nos guiaron para aplicar a becas del INA y elegir el técnico en
-                redes.”
+                "Nos guiaron para aplicar a becas del INA y elegir el técnico en
+                redes."
               </p>
               <span class="badge bg-warning text-dark">Asesoría INA</span>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <!-- Cronograma / cómo participar -->
-      <section class="row py-5">
+      <div class="row social-schedule py-5">
         <div class="col-lg-6">
           <h4 class="fw-bold">Cómo participar</h4>
           <ol class="text-secondary">
@@ -266,28 +268,32 @@
             <li>• Charla de orientación INA — Marzo</li>
           </ul>
         </div>
-      </section>
+      </div>
 
       <!-- Aliados -->
-      <section class="row py-5 bg-body-tertiary text-center">
+      <div class="row social-allies py-5 bg-body-tertiary text-center">
         <div class="col-12 mb-3">
           <h4 class="fw-bold">Aliados y convenios</h4>
           <p class="text-secondary mb-0">
             INA, colegios técnicos, ONG locales y empresas solidarias.
           </p>
         </div>
-        <div class="d-flex flex-wrap justify-content-center gap-3">
-          <span class="badge bg-light text-dark border">INA</span>
-          <span class="badge bg-light text-dark border">ONG locales</span>
-          <span class="badge bg-light text-dark border">Empresas aliadas</span>
-          <span class="badge bg-light text-dark border"
-            >Mentores voluntarios</span
-          >
+        <div class="col-12">
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <span class="badge bg-light text-dark border">INA</span>
+            <span class="badge bg-light text-dark border">ONG locales</span>
+            <span class="badge bg-light text-dark border"
+              >Empresas aliadas</span
+            >
+            <span class="badge bg-light text-dark border"
+              >Mentores voluntarios</span
+            >
+          </div>
         </div>
-      </section>
+      </div>
 
       <!-- Contacto / CTA -->
-      <section id="contacto" class="row py-5 bg-primary text-white">
+      <div id="contacto" class="row py-5 bg-warning text-white">
         <div class="col-lg-8 mx-auto text-center">
           <h3 class="fw-bold">Súmate al impacto</h3>
           <p class="mb-4">
@@ -329,8 +335,7 @@
             </div>
           </form>
         </div>
-      </section>
-
+      </div>
       <!-- Footer -->
       <div class="row footer d-flex p-1 bg-dark-subtle text-dark">
         <div
